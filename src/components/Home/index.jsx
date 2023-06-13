@@ -1,11 +1,13 @@
 import React from 'react'
+import GenCarousel from '../Carousel'
 import { Input } from '../Generics'
 import { Container } from './style'
 
+
 const Home = () => {
   return (
-    <Container   >
-       {/* <Input w={200} placeholder={'test'} />  */}
+    <Container>
+       <GenCarousel></GenCarousel>
     </Container>
   )
 }
