@@ -1,8 +1,8 @@
 import React,{useRef} from 'react'
 import { Button, Input } from '../Generics'
-import { Wrapper } from '../Navbar/style'
 import { Container ,Icons, MenuWrapper, Section} from './style'
 import { Dropdown } from 'antd';
+
 
 const Filter = () => {
   const countRef =useRef()
@@ -39,7 +39,8 @@ const Filter = () => {
     <Container className=''>
       <Input icon={<Icons.Houses></Icons.Houses>} placeholder={"Enter an adress"}/>
       <Dropdown
-      overlay={menu}
+      dropdownRender={()=>menu}
+      trigger={[`click`]}
       placement='bottomRight'
       arrow={{ pointAtCenter: true }}
     >

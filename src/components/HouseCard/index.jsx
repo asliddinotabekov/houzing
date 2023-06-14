@@ -28,12 +28,12 @@ export const HouseCard = ({ url, title, bed, bath, garage, ruler, info }) => {
         </Details>
       </Content>
       <Divider />
-      <Content footer>
-        <Details.Item footer>
+      <Content footer='true'>
+        <Details.Item footer='true'>
           <div className='info'><del>$2,800/mo</del></div>
           <div className='subTitle'>$7,500/mo</div>
         </Details.Item>
-        <Details.Item row>
+        <Details.Item row='true'>
           <Icons.Resize />
           <Icons.Love />
         </Details.Item>
