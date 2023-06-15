@@ -1,7 +1,6 @@
 import React from 'react'
 import GenCarousel from '../Carousel'
-import CategoryCard from '../CategoryCard'
-import HouseCard from '../HouseCard'
+import Category from '../Category'
 import { Container } from './style'
 
 
@@ -9,8 +8,7 @@ const Home = () => {
   return (
     <Container>
        <GenCarousel></GenCarousel>
-       {/* <HouseCard></HouseCard> */}
-       <CategoryCard/>
+       <Category/>
     </Container>
   )
 }

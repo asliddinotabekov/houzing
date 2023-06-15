@@ -35,8 +35,8 @@ const GenCarousel = () => {
         <Content.Desc>112 Glenwood Ave Hyde Park, Boston, MA</Content.Desc>
         <Content.Price>$5,250/mo</Content.Price>
     </Content>
-  <Icons.Arrow className="rotate-90 left-[20px]" onClick={next}></Icons.Arrow>
-  <Icons.Arrow className="rotate-[-90deg] right-[20px]" onClick={prev}></Icons.Arrow></Wrapper>
+  <Icons.Arrow className="rotate-0 left-[20px]" onClick={next}></Icons.Arrow>
+  <Icons.Arrow className="rotate-[-180deg] right-[20px]" onClick={prev}></Icons.Arrow></Wrapper>
   
   )
 }
