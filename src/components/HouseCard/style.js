@@ -8,7 +8,9 @@ import { bath, bed, car, love, resize, ruler } from '../../assets/icons';
 // import { ReactComponent as resize } from '../../assets/icons/resize.svg';
 
 const Container = styled.div`
-  width: 380px;
+width: 100%;
+  max-width: 380px;
+  min-width: 330px;
   height: 430px;
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))

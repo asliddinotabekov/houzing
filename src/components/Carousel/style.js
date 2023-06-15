@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import { arrow } from '../../assets/icons';
 
 export const Wrapper = styled.div`
-  height: 571px;
+  height: fit-content;
   position: relative;
+  width: 100%;
+  min-width: 500px;
 `;
 
 export const Icons = styled.div`

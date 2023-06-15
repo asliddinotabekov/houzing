@@ -34,7 +34,7 @@ const Filter = () => {
     <Section className='pt-2.5'>
       <Input onChange={onChange}  ref={countRef} defaultValue={query.get("country")} name="country" placeholder={'Country'}/>
       <Input onChange={onChange}  ref={regRef} defaultValue={query.get("region")} name="region" placeholder={'Region'}/>
-      <Input onChange={onChange}  ref={cityRef} defaultValue={query.get("city")} name="city" placeholder={'City'}/>
+      <Input onChange={onChange}  ref={cityRef} defaultValue={query.get("address")} name="address" placeholder={'City'}/>
       <Input onChange={onChange}  ref={zipRef} defaultValue={query.get("zip_code")} name="zip_code" placeholder={'Zip code'}/>
     </Section>
     <h1 className='subtitle'>Appartment Info</h1>
