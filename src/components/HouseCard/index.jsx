@@ -1,11 +1,12 @@
 import { Container, Content, Details, Img, Icons, Divider } from './style';
 import noimg from '../../assets/img/noimg.jpeg';
 
-export const HouseCard = ({data}) => {
+export const HouseCard = ({data = {}}) => {
+  console.log(data)
   const { address,country,city,description,houseDetails,price,attachments,salePrice} = data
   return (
     <Container>
-      <Img src={attachments[0].imgPath || noimg} />
+      <Img src={(attachments && attachments[0].imgPath )|| noimg} />
       <Content>
         <div className='subtitle ins'>{city}, {country}, </div>
         <div className='info'>{address || 'Quincy St, Brooklyn, NY, USA'}</div>
@@ -44,3 +45,4 @@ export const HouseCard = ({data}) => {
 };
 
 export default HouseCard;
+
