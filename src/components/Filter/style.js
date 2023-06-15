@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { houses, search, searchs, setting } from '../../assets/icons';
+import { houses,  searchs, setting } from '../../assets/icons';
 
 const Container = styled.div`
   display: flex;

@@ -1,6 +1,5 @@
 import React from 'react'
 import GenCarousel from '../Carousel'
-import { Input } from '../Generics'
 import HouseCard from '../HouseCard'
 import { Container } from './style'
 

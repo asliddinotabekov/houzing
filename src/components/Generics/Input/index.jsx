@@ -5,7 +5,7 @@ export const Input = forwardRef(({
   type,
   onChange,
   value,
-  defalutValue,
+  defaultValue,
   placeholder,
   name,
   w,
@@ -21,7 +21,7 @@ export const Input = forwardRef(({
       placeholder={placeholder}
       name={name}
       value={value}
-      defaultValue={defalutValue}
+      defaultValue={defaultValue}
       onChange={onChange}
       type={type}
       w={w}

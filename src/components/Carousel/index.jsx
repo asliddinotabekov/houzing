@@ -1,16 +1,15 @@
 import React, { useRef } from 'react'
 import { Blur, CarouselWrapper, Icons, Img, Wrapper ,Content} from './style'
-import { Carousel } from 'antd';
 import { house1,house2 } from '../../assets/img';
 
-const contentStyle = {
-    margin: 0,
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  };
+// const contentStyle = {
+//     margin: 0,
+//     height: '160px',
+//     color: '#fff',
+//     lineHeight: '160px',
+//     textAlign: 'center',
+//     background: '#364d79',
+//   };
 
 const GenCarousel = () => {
    

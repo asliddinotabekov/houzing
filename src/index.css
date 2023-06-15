@@ -66,3 +66,9 @@ font-size: 14px;
 line-height: 20px;
 color: #696969;
 }
+
+ins{
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}

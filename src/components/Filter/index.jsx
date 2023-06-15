@@ -2,6 +2,9 @@ import React,{useRef} from 'react'
 import { Button, Input } from '../Generics'
 import { Container ,Icons, MenuWrapper, Section} from './style'
 import { Dropdown } from 'antd';
+import { uzeReplace } from '../../hooks/useReplace';
+import useSearch  from '../../hooks/useSearch'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Filter = () => {
@@ -14,13 +17,25 @@ const Filter = () => {
   const sortRef =useRef()
   const minRef =useRef()
   const maxRef =useRef()
+
+  const navigate =useNavigate()
+  const location =useLocation()
+  console.log(location);
+  const onChange =({target:{value,name}})=>{
+    let news =uzeReplace(name,value)
+    navigate(`${location.pathname}${news}`)
+  }
+  console.log(uzeReplace("address", "tashkent"))
+  const query =  useSearch()
+  console.log(query.get("zip_code"),"searchhook")
+
   const menu =<MenuWrapper>
     <h1 className='subtitle'>Adress</h1>
     <Section className='pt-2.5'>
-      <Input  ref={countRef} placeholder={'Country'}/>
-      <Input  ref={regRef} placeholder={'Region'}/>
-      <Input  ref={cityRef} placeholder={'City'}/>
-      <Input  ref={zipRef} placeholder={'Zip code'}/>
+      <Input onChange={onChange}  ref={countRef} defaultValue={query.get("country")} name="country" placeholder={'Country'}/>
+      <Input onChange={onChange}  ref={regRef} defaultValue={query.get("region")} name="region" placeholder={'Region'}/>
+      <Input onChange={onChange}  ref={cityRef} defaultValue={query.get("city")} name="city" placeholder={'City'}/>
+      <Input onChange={onChange}  ref={zipRef} defaultValue={query.get("zip_code")} name="zip_code" placeholder={'Zip code'}/>
     </Section>
     <h1 className='subtitle'>Appartment Info</h1>
     <Section className='pt-2.5'>
