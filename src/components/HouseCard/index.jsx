@@ -9,7 +9,7 @@ export const HouseCard = ({data = {}}) => {
       <Img src={(attachments && attachments[0].imgPath )|| noimg} />
       <Content>
         <div className='subtitle ins'>{city}, {country}, </div>
-        <div className='info'>{address || 'Quincy St, Brooklyn, NY, USA'}</div>
+        <div className='info'>{address || 'Quincy St, Brooklyn, NY, USA'} rooms {houseDetails?.room}</div>
         <Details>
           <Details.Item>
             <Icons.Bed />
@@ -32,8 +32,8 @@ export const HouseCard = ({data = {}}) => {
       <Divider />
       <Content footer='true'>
         <Details.Item footer='true'>
-          <div className='info'><del>${price || "720.00"}/mo</del></div>
-          <div className='subTitle'>${salePrice || "920.00"}/mo</div>
+          <div className='info'><del>${price || "0"}/mo</del></div>
+          <div className='subTitle'>${salePrice || "0"}/mo</div>
         </Details.Item>
         <Details.Item row='true'>
           <Icons.Resize />

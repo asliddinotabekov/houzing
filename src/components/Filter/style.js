@@ -1,5 +1,26 @@
 import styled from 'styled-components';
 import { houses,  searchs, setting } from '../../assets/icons';
+import { Select, Space } from 'antd';
+
+export const AntSelect = styled(Select)`
+  min-width: 250px;
+  width: 100%;
+  max-width: 250px;
+  height: 44px;
+  &:where(.css-dev-only-do-not-override-12jzuas).ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  width: 100%;
+  height: 44px;
+  padding: 0 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+`;
+
+export const SelectWrap = styled(Space)`
+  
+`;
 
 const Container = styled.div`
   display: flex;
