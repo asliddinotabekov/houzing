@@ -39,21 +39,18 @@ const Filter = () => {
   const cityRef =useRef()
   const zipRef =useRef()
   const roomRef =useRef()
-  const sizeRef =useRef()
+  // const sizeRef =useRef()
   const sortRef =useRef()
   const minRef =useRef()
   const maxRef =useRef()
 
   const navigate =useNavigate()
   const location =useLocation()
-  console.log(location);
   const onChange =({target:{value,name}})=>{
     let news =uzeReplace(name,value)
     navigate(`${location.pathname}${news}`)
   }
-  console.log(uzeReplace("address", "tashkent"))
   const query =  useSearch()
-  console.log(query.get("zip_code"),"searchhook")
 
   
   const menu =<MenuWrapper>
@@ -67,7 +64,7 @@ const Filter = () => {
     <h1 className='subtitle'>Appartment Info</h1>
     <Section className='pt-2.5'>
     <Input onChange={onChange} name="room" ref={roomRef} placeholder={'Rooms'}/>
-    <AntSelect onChange={onChangeSort} defaultValue={query.get("sort") || 'Select Sort'}>
+    <AntSelect onChange={onChangeSort} ref={sortRef} defaultValue={query.get("sort") || 'Select Sort'}>
               <AntSelect.Option value='' >
                 Select Sort
               </AntSelect.Option>
@@ -81,7 +78,7 @@ const Filter = () => {
           
       </AntSelect>
 
-      <AntSelect onChange={onChangeCtg} defaultValue='Select Category'>
+      <AntSelect onChange={onChangeCtg}  defaultValue='Select Category'>
               <AntSelect.Option value='' >
                 Select Category
               </AntSelect.Option>

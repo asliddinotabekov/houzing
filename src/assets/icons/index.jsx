@@ -42,7 +42,7 @@ export { ReactComponent as gym} from './gym.svg'
 export { ReactComponent as qozon} from './qozon.svg'
 export { ReactComponent as kansaner} from './kansaner.svg'
 export { ReactComponent as file_dow} from './file_dow.svg'
-export { ReactComponent as start} from './start.svg'
+export { ReactComponent as start} from './stars.svg'
 export { ReactComponent as houses} from './houses.svg'
 export { ReactComponent as logo} from './logo.svg'
 export { ReactComponent as setting} from './setting.svg'
@@ -54,3 +54,11 @@ export { ReactComponent as ruler} from './ruler.svg'
 export { ReactComponent as car} from './car.svg'
 export { ReactComponent as love} from './love.svg'
 export { ReactComponent as resize} from './resize.svg'
+
+export { ReactComponent as email } from './cardMassage.svg';
+export { ReactComponent as email1 } from './email.svg';
+export { ReactComponent as phone } from './phone.svg';
+
+export { ReactComponent as calculator } from './calculator.svg';
+export { ReactComponent as cardHouse } from './cardHouse.svg';
+export { ReactComponent as cardMaps } from './cardMaps.svg';

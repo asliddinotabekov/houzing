@@ -14,15 +14,18 @@ const Properties = () => {
      console.log(res)
     })
   },[search])
-  
   return (
+    <React.Fragment>
+      <div className="title">Proporties</div>
+      <div className="info text-center">Arzon va shinam uylar</div>
     <Container>
       {
         data.map((val)=>{
-        return  <HouseCard data={val} key={val.id}/>
+          return  <HouseCard data={val} key={val.id}/>
         })
       }
     </Container>
+      </React.Fragment>
   )
 }
 

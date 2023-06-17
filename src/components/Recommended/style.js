@@ -7,21 +7,22 @@ export const Container = styled.div`
   flex-direction: column;
   position: relative;
   margin: auto;
-  padding: 96px 130px;
+  padding: 0px 130px;
+  padding-top: 96px;
   max-width: 1440px;
   width: 100%;
+  margin-bottom: 88px;
+  background-color: white;
 `;
 
+
 export const Content = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* max-width: 235px; */
-  width: 100%;
-  `;
-
+`;
 
 export const Icons = styled.div`
 `;
@@ -51,6 +52,9 @@ position: absolute;
 export const CarouselWrapper = styled(Carousel)`
     width: 100%;
     max-width: 1440px;
+    .ant-carousel {
+      background-color: #ffffff;
+    }
     
     > .slick-dots li button {
     width: 6px;

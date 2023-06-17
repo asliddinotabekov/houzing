@@ -1,5 +1,7 @@
 import useUniqe from "../hooks/useId";
 import React from "react";
+import HouseItem from "../components/HouseItem";
+import SignIn from "../components/SignIn";
 
 const  HomePage = React.lazy(()=> import("../pages/Home"))
 const  Contact = React.lazy(()=> import("../components/Contact"))
@@ -41,9 +43,18 @@ export const navbar =[
 },
 { 
     id:useUniqe,
-    element: <h1>Generic Sign In</h1>,
+    element: <SignIn/>,
     title: 'Sign in',
     path:'/signin',
+    private: false,
+    hidden: true
+},
+
+{ 
+    id:useUniqe,
+    element: <HouseItem/>,
+    title: 'House Item',
+    path:'/properties/:id',
     private: false,
     hidden: true
 },

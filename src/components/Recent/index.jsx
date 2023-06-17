@@ -1,15 +1,15 @@
 import React, { useRef ,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import CategoryCard from '../CategoryCard'
-import {  CarouselWrapper, Icons,  Container, Content } from './style'
+import HouseCard from '../HouseCard'
+import {  CarouselWrapper, Icons,  Container,Content } from './style'
 
 
-const Category = () => {
+const Recent = () => {
   // ---------------- State --------------//
   const [data ,setData] = React.useState([])
 
   // ---------------useEffect portion ------------------//
-  const url ="http://127.0.0.1:8081/api/v1/categories/list"
+  const url ="http://127.0.0.1:8081/api/v1/houses/list"
   useEffect(()=>{
     fetch(url,{
       headers: {
@@ -19,7 +19,7 @@ const Category = () => {
     }
   )
     .then((res)=>res.json())
-    .then((res)=> setData(res?.data || []))
+    .then((res)=> setData(res?.data))
   },[])
   
   // ----------------- Carousel properties and func ----------------//
@@ -36,16 +36,16 @@ const Category = () => {
     <Container>
       <Content>
         <h1 className="title">
-          Why Choose Us
+          Recent
         </h1>
-        <div className="info  ">
+        <div className="info">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis velit repellendus nihil.
         </div>
       </Content>
-      <CarouselWrapper ref={caruselRef} pauseOnDotsHover={true} autoplay={true} swipeToSlide={true} slidesToShow={4}>
+      <CarouselWrapper ref={caruselRef} pauseOnDotsHover={true} autoplay={true} swipeToSlide={true} slidesToShow={3}>
         {
           data.map((val)=>{
-            return <CategoryCard key={val.id} onClick={() => navigate(`/properties?category_id=${val.id}`)} data={val}/>
+            return <HouseCard key={val.id} onClick={() => navigate(`/properties/${val.id}`)} data={val}/>
           })
         }
       </CarouselWrapper> 
@@ -56,4 +56,4 @@ const Category = () => {
   )
 }
 
-export default Category
+export default Recent

@@ -10,7 +10,9 @@ export const Input = forwardRef(({
   name,
   w,
   h,
-  icon
+  icon,
+  className,
+  style
 },ref) => {
   return (
     <Wrapper>
@@ -26,6 +28,8 @@ export const Input = forwardRef(({
       type={type}
       w={w}
       h={h}
+      className={className}
+      style={style}
       ></Container>
       </Wrapper>
   )

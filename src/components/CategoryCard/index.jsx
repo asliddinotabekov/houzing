@@ -3,7 +3,6 @@ import noimg from '../../assets/img/noimg.jpeg';
 import ctg1  from '../../assets/img/category.png';
 
 export const CategoryCard = ({onClick,data = {}}) => {
-  console.log(data)
   const { name} = data
   return (
     <Container onClick={onClick}>
