@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { own } from '../../assets/img'
+import { noimg, own } from '../../assets/img'
 import Input from '../Generics/Input'
 import Button from '../Generics/Button'
-import {Container,SectionLeft, Icons, SectionRight,Details, Description, Blur, More, Download, YInfo} from './style'
+import {Container,SectionLeft, Icons, SectionRight,Details, Description, Blur, More, Download, YInfo, Container1, Children, ImageContainer, ImgContainer, Blurs} from './style'
 import Yandex from '../Generics/Yandex'
 import Review from '../Review'
 import Recommended from '../Recommended'
+import hm1 from '../../assets/img/pg2_hom1.png'
+import hm2 from '../../assets/img/pg2_hom2.jpg'
+import hm3 from '../../assets/img/pg2_hom3.jpg'
+import hm4 from '../../assets/img/pg2_hom4.jpg'
+import hm5 from '../../assets/img/pg2_hom5.jpg'
 const HouseItem = () => {
   //state and params 
   const params =useParams()
@@ -19,8 +24,39 @@ const HouseItem = () => {
     .then((res)=>setData(res?.data))
     window.scrollTo(0,0)
     }, [params?.id]);
+    console.log(data," ===> Bu data")
+    // data?.attachments[0]?.imgPath
   return <div>
+    <ImageContainer>
+        <ImageContainer.Main
+          src={(data?.attachments && data?.attachments[0]?.imgPath) || noimg}
+          alt="test"
+        />
+        <ImgContainer>
+          {data?.attachments &&
+            data?.attachments?.slice(1, 5).map((value, index) => {
+              return data?.attachments?.length > 5 && index === 3 ? (
+                <Blurs.Container>
+                  <ImageContainer.Subimg
+                    key={value.id}
+                    src={value?.imgPath}
+                    alt="test"
+                  />
+                  <Blur>+{data?.attachments?.length - 5}</Blur>
+                </Blurs.Container>
+              ) : (
+                <ImageContainer.Subimg
+                  key={value.id}
+                  src={value?.imgPath}
+                  alt="test"
+                />
+              );
+            })}
+        </ImgContainer>
+      </ImageContainer>
+
     <Container>
+    
       <SectionLeft>
         <section className='flex justify-between w-full'>
           <div>

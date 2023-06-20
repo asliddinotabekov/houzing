@@ -62,3 +62,8 @@ export { ReactComponent as phone } from './phone.svg';
 export { ReactComponent as calculator } from './calculator.svg';
 export { ReactComponent as cardHouse } from './cardHouse.svg';
 export { ReactComponent as cardMaps } from './cardMaps.svg';
+export { ReactComponent as signin } from './signin.svg';
+export { ReactComponent as signup } from './signup.svg';
+export { ReactComponent as edite } from './edite.svg';
+export { ReactComponent as del } from './delet.svg';
+export { ReactComponent as nodata } from './no-data.svg';

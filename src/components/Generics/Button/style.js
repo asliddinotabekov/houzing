@@ -4,7 +4,7 @@ const getStyle =({type})=>{
     switch(type){
         case 'dark':
             return{
-    background:'transparent',
+    background:'rgb(13,38,59)',
     border:"1px solid white",
     color:'white',
 }
@@ -32,16 +32,16 @@ export const Container = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-min-width:120px;
-
+min-width: 70px;
 font-size:${({font})=>font?`${font}px`:'14px'} ;
 height: ${({h})=>h?`${h}px`:'44px'};
 width: ${({w})=>w?`${w}px`:'130px'};
 border-radius:2px;
-cursor: pointer;
+opacity: ${({ disabled }) => (disabled ? 0.7 : 1)};
+cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 ${getStyle}
 &:active{
-    opacity:0.7;
+    opacity:0.5;
 }
 
 `;

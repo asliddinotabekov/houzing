@@ -9,30 +9,41 @@ import { bath, bed, car, love, resize, ruler } from '../../assets/icons';
 
 const Container = styled.div`
 width: 100%;
-  max-width: 380px;
+  max-width: 470px;
   min-width: 330px;
-  height: 430px;
+  height: fit-content;
   &:hover{
     filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
   }
-  border: 1px solid rgba(230, 233, 236, 1);
   cursor: pointer;
 `;
 
 const Img = styled.img`
   width: 100%;
-  max-height: 221px;
-  min-height: 220px;
+  height: 100%;
+  max-height: 113px;
+  min-height: 113px;
+  max-width: 113px;
+
+  min-width: 113px;
 `;
 
+export const Blur = styled.div`
+    position: absolute;
+    position: absolute;
+    top: 2px;
+    bottom: 8px;
+    left: 2px;
+    right: 0;
+  `;
+
 const Content = styled.div`
+width: 100%;
   display: flex;
   flex-direction: ${({ footer }) => (footer ? 'row' : 'column')};
   justify-content: ${({ footer }) => footer && 'space-between'};
-  padding-top: 24px;
-  padding: 16px 20px;
   background: white;
 `;
 const Details = styled.div`

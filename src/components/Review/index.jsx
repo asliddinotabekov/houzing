@@ -2,7 +2,7 @@
 import React from 'react'
 import Sliders from './sliders'
 import Starts from './starts'
-import { Container, Div, Slide ,Icons} from './style'
+import { Container, Div, Slide } from './style'
 import own from '../../assets/img/own.jpg'
 
 const Review = () => {

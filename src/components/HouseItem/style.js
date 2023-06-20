@@ -27,6 +27,58 @@ export const Container = styled.div`
   justify-content: space-between;
 
   `;
+  export const Container1 = styled.div`
+  height: 450px;
+  width: 100%;
+  padding: 25px 130px 25px 130px;
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  gap: 20px;
+
+`;
+export const Children = styled.img`
+ 
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  padding-top: 50px;
+  color: #fff;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+background-size: cover;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  padding: var(--padding);
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  margin-bottom: 24px;
+  margin-top: 24px;
+`;
+export const ImgContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 20px;
+`;
+
+
+ImageContainer.Main = styled.img`
+  width: 100%;
+  max-width: 580px;
+  max-height: 400px;
+`;
+ImageContainer.Subimg = styled.img`
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  max-height: 190px;
+`;
 
   export const YInfo = styled.div`
   font-family: 'Montserrat';
@@ -88,6 +140,37 @@ position: absolute;
   left: 0px;
   right: 0px;
 `;
+export const Blurs = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: bold;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height, or 122% */
+
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+`;
+Blurs.Container = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  max-height: 190px;
+`;
+
 
 export const More = styled.div`
 font-family: 'Montserrat';

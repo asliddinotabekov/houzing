@@ -1,10 +1,11 @@
+import { Dropdown } from 'antd'
 import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { navbar } from '../../utils/navbar'
 import Filter from '../Filter'
 import Footer from '../Footer'
 import { Button } from '../Generics'
-import { Container,Icon,Link,Main,Section,Wrapper } from './style'
+import { Container,Icon,Link,Main,Section,Wrapper,Menu } from './style'
 
 
 
@@ -31,8 +32,30 @@ const Navbar = () => {
 //     console.log(res)
 //   });
 // })
-
+  const token = localStorage.getItem('token')
   const navigate = useNavigate()
+  const onClickProfile=({target:{dataset:{name}}})=>{
+    console.log(name)
+    if(name === 'logout'){
+      localStorage.removeItem('token')
+      navigate('/register')
+    }else{
+      navigate(`/${name}`)
+    }
+  }
+  const menu = (
+      <Menu>
+        <Menu.Item data-name="myprofile" onClick={onClickProfile}>
+          My profile
+        </Menu.Item>
+        <Menu.Item data-name="favourite" onClick={onClickProfile}>
+          Favourites
+        </Menu.Item>
+        <Menu.Item data-name="logout" onClick={onClickProfile}>
+          Log out
+        </Menu.Item>
+      </Menu>
+  )
   return (
     <Container >
       <Main>
@@ -54,7 +77,20 @@ const Navbar = () => {
         }
         </Section>
         <Section>
-       <Button type={'dark'} onClick={()=>navigate('/signin')}>Sign In</Button>
+          {
+            token?
+              <Dropdown
+      dropdownRender={()=>menu}
+      trigger={[`click`]}
+      placement='bottomRight'
+      arrow={{ pointAtCenter: true }}
+    >
+      <div>
+      <Button type={'dark'}> Profile</Button>
+      </div>
+    </Dropdown>
+            :<Button type={'dark'} onClick={()=>navigate('/register')}>Register</Button>
+          }
         </Section>
         
         </Wrapper>

@@ -1,19 +1,7 @@
-import React, { useRef ,useEffect} from 'react'
-import HouseCard from '../HouseCard'
-import {  CarouselWrapper, Icons,  Container,Content, Wrapper } from './style'
+import {   Icons,  Container,Content, Wrapper } from './style'
 
 
 const Why = () => {
- 
-  
-  // ----------------- Carousel properties and func ----------------//
-    const caruselRef =useRef()
-    const next =()=> caruselRef.current.next()
-    const prev =()=> caruselRef.current.prev()
-
-    // ------------Navigate ------------------//
-
-    
   return (
 
     <Container className='bg-red-400'>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Slider } from 'antd'
 import { useState } from 'react'
-import { Div, Icons } from './style'
+import { Div } from './style'
 
 const Sliders = () => {
     const [count, setCount] =useState(0)
