@@ -9,9 +9,9 @@ import { bath, bed, car, love, resize, ruler } from '../../assets/icons';
 
 const Container = styled.div`
 width: 100%;
-  max-width: 380px;
-  min-width: 330px;
-  height: 430px;
+  max-width: 680px;
+  min-width: 530px;
+  height: 530px;
   &:hover{
     filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
@@ -59,12 +59,12 @@ Icons.Love = styled(love)`
   width: 27px;
   height: 27px;
   padding: 6px;
-  background: ${({fav})=>fav?"red":"#f6f8f9"};
+  background: ${({ fav }) => fav ? "red" : "#f6f8f9"};
   border-radius: 50%;
   margin-left: 20px;
   cursor: pointer;
   path{
-    fill:${({fav})=>fav && "white"};
+    fill:${({ fav }) => fav && "white"};
   }
   &:active {
     transform: scale(0.9);

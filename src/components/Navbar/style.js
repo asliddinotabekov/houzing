@@ -47,11 +47,11 @@ const Link = styled(NavLink)`
   color: #ffff;
 `;
 
-const Icon =styled.div`
+const Icon = styled.div`
 
 `
 
-Icon.Logo = styled(logo) `
+Icon.Logo = styled(logo)`
   height: 36px;
   width: 30px;
 `
@@ -79,5 +79,5 @@ Menu.Item = styled.div`
 `;
 
 
-export { Container, Wrapper, Section, Icon, Link, Main,Menu, };
+export { Container, Wrapper, Section, Icon, Link, Main, Menu, };
 
